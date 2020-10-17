@@ -1,6 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $(".devour").on("click", function(event) {
+    $(".change-devour").on("click", function(event) {
+        console.log("clicked")
       var id = $(this).data("id");
   
       // Send the PUT request.
@@ -20,8 +21,8 @@ $(function() {
       event.preventDefault();
   
       var newBurger = {
-        name: $("#burger-name").val().trim(),
-        devoured: false
+        burger_name: $("#burger-name").val().trim(),
+        devoured: 0
       };
   
       // Send the POST request.
@@ -30,7 +31,6 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new cat");
           // Reload the page to get the updated list
           location.reload();
         }
