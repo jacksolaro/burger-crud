@@ -5,6 +5,8 @@
 - Github Repo: https://github.com/jacksolaro/burger-crud
 - Deployed App: https://jacksburgers.herokuapp.com/
 
+![Demo of application working](https://github.com/jacksolaro/burger-crud/blob/main/public/assets/img/app_demo.gif?raw=true)
+
 ## DESCRIPTION
 ---------------------
 This project demonstrates the principles of Create, Read, and Destroy. The app allows a user to create a burger, eat it, and delete burgers from the burger graveyard.
