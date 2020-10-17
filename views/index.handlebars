@@ -20,27 +20,45 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h2>Ready-to-Eat Burgers</h2>
-      <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        <li>{{burger_name}}
-          <button class="change-devour" data-id="{{id}}" data-devoured="true">EAT</button>
-        </li>
-        {{/unless}}
-        {{/each}}
-      </ul>
+      <h2 class="text-center">Ready-to-Eat Burgers</h2>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="http://placekitten.com/100/100" class="card-img" alt="...">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">{{burger_name}}</h5>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <button class="change-devour" data-id="{{id}}" data-devoured="true">EAT</button>
+          </div>
+        </div>
+      </div>
+      {{/unless}}
+      {{/each}}
     </div>
     <div class="col-sm-6">
-      <h2>Burger Graveyard:</h2>
-
-      <ul>
+      <h2 class="text-center">Burger Graveyard:</h2>
         {{#each burgers}}
         {{#if devoured}}
-        <li>{{burger_name}}</li>
+              <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="http://placekitten.com/100/100" class="card-img" alt="...">
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h5 class="card-title">{{burger_name}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
         {{/if}}
         {{/each}}
-      </ul>
     </div>
   </div>
 </div>
