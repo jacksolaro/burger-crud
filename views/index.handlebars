@@ -43,22 +43,25 @@
     </div>
     <div class="col-sm-6">
       <h2 class="text-center">Burger Graveyard:</h2>
-        {{#each burgers}}
-        {{#if devoured}}
-              <div class="card mb-3" style="max-width: 540px;">
+      {{#each burgers}}
+      {{#if devoured}}
+      <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-3">
             <img src="http://placekitten.com/100/100" class="card-img" alt="...">
           </div>
-          <div class="col-md-9">
+          <div class="col-md-6">
             <div class="card-body">
               <h5 class="card-title">{{burger_name}}</h5>
             </div>
           </div>
+          <div class="col-md-3">
+            <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+          </div>
         </div>
       </div>
-        {{/if}}
-        {{/each}}
+      {{/if}}
+      {{/each}}
     </div>
   </div>
 </div>
